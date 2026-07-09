@@ -1,0 +1,8 @@
+/* css mean cascading style sheet which is used to visualize data of  the web page written in html
+html creates the structure of the web page while css adds styling to that structure */
+html{
+    background-color: pink;
+    ol{
+        color: rgb(36, 0, 36);
+    }
+}
