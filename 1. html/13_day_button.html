@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button in html</title>
+</head>
+<body>
+    <h1>Button</h1>
+    <p>you can add buttons in your webpage to make the page interactive to the user for specific actions</p>
+    <h3>tag:</h3>
+    use &lt;button&gt; tag to add a button.
+    <br>
+    like this:
+    <button>click me</button>
+    <br>
+    <h3>attributes:</h3>
+    <h4>Form-Related Attributes:</h4>
+    formaction — where to send data (overrides form's action)<br>
+formmethod — get or post (overrides form's method)<br>
+formtarget — where to open response (_blank, _self, etc.)<br>
+formnovalidate — skips form validation for this submit<br>
+    <button 
+  type="submit"
+  formaction="/submit-page"
+  formmethod="post"
+  formtarget="_blank"
+  formnovalidate>
+  Submit Without Validation
+</button>
+    <h4>type attribute:</h4>
+    submit — default type inside a &lt;form&gt; sends form data<br>
+reset — clears all form fields back to default<br>
+button — does nothing unless you add JavaScript
+<h5>button type</h5>
+Does absolutely nothing by itself. It's a plain clickable button meant to be controlled with JavaScript.<br>
+<button type="button" onclick="alert('You clicked me!')">
+  Click Me
+</button><br>
+Without onclick (or JS), it just sits there and does nothing when clicked — no form submission, no reset.
+<h5>submit type</h5>
+Sends the form data to the server. This is the default type if you don't specify one inside a form.<br>
+<form action="/register" method="post">
+  <input type="text" name="username" placeholder="Enter username">
+  <button type="submit">Register</button>
+</form>
+<h5>reset type</h5>
+Clears all form fields back to their original/default values.<br>
+<form>
+  <input type="text" name="username" value="">
+  <input type="email" name="email" value="">
+  <button type="reset">Clear Form</button>
+</form>
+<h3>side by side comparison:</h3>
+<form action="/submit" method="post">
+  <input type="text" name="username">
+
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+  <button type="button" onclick="alert('Just a click, nothing else')">Just Button</button>
+</form>
+<h4>common attributes:</h4>
+id — unique identifier, used to target with CSS/JS<br>
+class — for CSS styling<br>
+name — name sent with form data (used with value)<br>
+value — value sent to server when button submits form<br>
+disabled — greys out button, makes it unclickable<br>
+autofocus — automatically focuses button when page loads<br>
+form — links button to a form by its id, even if button is outside the &lt;form&gt; tags<br>
+title — tooltip text shown on hover<br>
+<h2>Registration Form</h2><h3>with attributes example</h3>
+
+  <form id="regForm" action="/register" method="post" >
+    <input type="text" name="fullname" placeholder="Enter your name"><br><br>
+    <input type="email" name="email" placeholder="Enter your email"><br><br>
+
+    <button 
+      type="submit" 
+      id="submitBtn" 
+      name="action" 
+      value="register" 
+      title="Click to register"
+      >
+      Register
+    </button>
+
+    <button 
+      type="reset" 
+      title="Clear all fields">
+      Clear
+    </button>
+
+    <button 
+      type="button" 
+      disabled 
+      title="Currently unavailable">
+      Delete Account
+    </button>
+
+  </form>
+
+  <br>
+
+  <button 
+    type="button" 
+    form="regForm" 
+    onclick="alert('This button is outside the form but still linked to it!')">
+    External Button
+  </button>
+  <h3> with an Image/Icon Inside</h3>
+<button type="button" >
+  <img src="farah.jpg" alt="icon" height="50"> Save
+</button>
+
+</body>
+</html>
